@@ -37,7 +37,7 @@ jobs:
             --test csrf dom_xss header_security secret_tokens directory_listing xxe       \
             unvalidated_redirect rfi lfi sqli osi ssti ssrf html_injection xss            \
             --name "Juice-Shop"                                                      \
-            --crawler  http://localhost:3000                                        \
+            --crawler  http://localhost:3000/                                        \
             --repeater ${{ secrets.REPEATER }}                                            \
             --token ${{ secrets.NEXPLOIT_TOKEN }})
           echo "SCAN_ID=$SCAN_ID" >> $GITHUB_ENV
